@@ -1,7 +1,9 @@
 make
 if [ ! -e text8 ]; then
-  wget http://mattmahoney.net/dc/text8.zip -O text8.gz
-  gzip -d text8.gz -f
+  #wget http://mattmahoney.net/dc/text8.zip -O text8.gz
+  #gzip -d text8.gz -f
+  curl -o text8.zip http://mattmahoney.net/dc/text8.zip
+  unzip text8.zip
 fi
 echo ----------------------------------------------------------------------------------------------------------------
 echo Note that the accuracy and coverage of the test set questions is going to be low with this small training corpus
